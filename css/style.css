@@ -1,8 +1,11 @@
+body{
+  margin:0;
+}
 .fundo{
     width: 100vw;
-    height: 200vh;
+    height: 100%;
     background-image: linear-gradient(to right, #78e3de, #13817c);
-    margin: -15px;
+    padding: 5% 0%;
 }
 .titulo{
     display: flex;
@@ -176,5 +179,43 @@ textarea:focus,input:focus,select:focus, button:focus {
     100%{
         opacity: 0;
         transform: translate3d(200px,0,0);
+    }
+}
+#relogio{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+#dia{
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    
+}
+#horas{
+    font-size: 1.7rem;
+    font-family: 'Courier New', Courier, monospace;
+    color:#13817c ;
+    font-weight: bolder;
+    
+}
+#horas > span{
+    animation: piscar 1s infinite;
+}
+#dia::before{
+    content: 'dia';
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color:#13817c ;
+    padding-right:2%;
+    
+}
+
+@keyframes piscar{
+    0%,100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
     }
 }
